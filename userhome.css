@@ -1,0 +1,85 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url('fonts/opensans-regular-webfont.woff2') format('woff2'),
+  url('fonts/opensans-regular-webfont.woff') format('woff');
+}
+/* followed a tutorial on youtube for slider url: https://www.youtube.com/watch?v=8Yq7g8us-po */
+@keyframes slider {
+  0%{
+    left: 0;
+  }
+  20%{
+    left: 0;
+  }
+  25%{
+    left: -100%;
+  }
+  45%{
+    left: -100%;
+  }
+  50%{
+    left: -200%;
+  }
+  70%{
+    left: -200%;
+  }
+  75%{
+    left: -300%;
+  }
+  95%{
+    left: -300%;
+  }
+  100%{
+    left: -400%;
+  }
+}
+
+#slider{
+  overflow: hidden;
+}
+
+#slider figure img{
+  width: 20%;
+  float: left;
+}
+
+#slider figure{
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  animation: 19s slider infinite;
+}
+/**/
+
+
+
+.ui.borderless.menu {
+  background-color: #f7941d;
+  box-shadow: none;
+
+}
+
+.ui.fluid.image {
+  display: block;
+  max-width: 100%;
+}
+
+.ui.menu {
+  margin: 0rem 0;
+  border-radius: 0rem;
+  border: 0px;
+}
+
+.ui.menu .active.item {
+  background: none;
+}
+
+.orangeBox {
+  content: '';
+  background-color: #f15a29;
+  position: absolute;
+  width: 100%;
+
+}
+
