@@ -8,7 +8,7 @@ const foodtasteoptions = [
 ];
 
 /** A simple static component to render some text for the landing page. */
-class UserProfile extends React.Component {
+export default class UserProfile extends React.Component {
   render() {
     return (
         <Container>
@@ -16,7 +16,7 @@ class UserProfile extends React.Component {
             <Grid.Row>
               <Grid.Column width={5}>
                 <Card>
-                  <Image src="images/matthew.png"/>
+                  <Image src="images/testprofilepicture.png"/>
                   <Card.Content>
                     <Card.Header>
                       Username
@@ -75,7 +75,7 @@ class UserProfile extends React.Component {
                 />
 
                 <br></br>
-                <Button floated={'right'}>Submit</Button>
+                <Button fluid>Submit</Button>
 
               </Grid.Column>
             </Grid.Row>
@@ -85,4 +85,3 @@ class UserProfile extends React.Component {
   }
 }
 
-export default UserProfile;
