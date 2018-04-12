@@ -18,6 +18,7 @@ import TopPicks from '../pages/TopPicks';
 import UserProfile from '../pages/UserProfile';
 import AddVendor from '../pages/AddVendor';
 import FoodsAvailable from '../pages/FoodsAvailable';
+import VendorHomePage from '../pages/VendorHomePage';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -33,6 +34,7 @@ class App extends React.Component {
               <Route path="/signup" component={Signup} />
               <Route path="/userprofile" component={UserProfile} />
               <Route path="/addvendor" component={AddVendor} />
+              <Route path='/VendorHomePage' component={VendorHomePage} />
               <ProtectedRoute path="/list" component={ListStuff} />
               <ProtectedRoute path="/add" component={AddStuff} />
               <ProtectedRoute path="/edit/:_id" component={EditStuff} />

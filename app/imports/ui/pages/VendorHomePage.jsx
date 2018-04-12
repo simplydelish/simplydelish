@@ -2,7 +2,7 @@ import React from 'react';
 import { Grid, Header, Form, Card, Image, Button } from 'semantic-ui-react';
 
 /** A simple static component to render some text for the landing page. */
-class Landing extends React.Component {
+class VendorHomePage extends React.Component {
   render() {
     return (
         <Grid>
@@ -49,4 +49,4 @@ class Landing extends React.Component {
   }
 }
 
-export default Landing;
+export default VendorHomePage;
