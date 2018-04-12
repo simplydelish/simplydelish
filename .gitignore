@@ -1,7 +1,5 @@
 *.iml
 .idea
-*.xml
 node_modules
 *.xml
-node_modules
 .idea/workspace.xml
