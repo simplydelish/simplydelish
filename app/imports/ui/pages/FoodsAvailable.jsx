@@ -7,8 +7,6 @@ class FoodsAvailable extends React.Component {
   render() {
     return (
         <div>
-          <NavBar links={[{ title: 'Home', href: '#' }, { title: 'Page 1', href: '#' },
-            { title: 'Page 2', href: '#' }]}></NavBar>
           <Grid centered>
             <Grid.Row>
               <FoodCard
