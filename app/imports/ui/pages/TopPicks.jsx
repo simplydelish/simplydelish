@@ -11,35 +11,35 @@ class TopPicks extends React.Component {
             { title: 'Page 2', href: '#' }]}></NavBar>
           <Grid centered>
             <Grid.Row>
-                <FoodCard
-                    image={'http://www.iwi.center/wp-content/uploads/2018/04/food.jpg'}
-                    title={'The Sistah'}
-                    hours={'Monday thru Friday: 10:00am -  2:00pm\n Holmes Hall'}
-                    description={'Serves Korean-inspired local cuisine.'}
-                    numReviews={27}
-                    numLikes={75}
-                />
-                <FoodCard
-                    image={'http://www.iwi.center/wp-content/uploads/2018/04/food.jpg'}
-                    title={'The Sistah'}
-                    hours={'Monday thru Friday: 10:00am -  2:00pm\n Holmes Hall'}
-                    description={'Serves Korean-inspired local cuisine.'}
-                    numReviews={27}
-                    numLikes={75}
-                />
-                <FoodCard
-                    image={'http://www.iwi.center/wp-content/uploads/2018/04/food.jpg'}
-                    title={'The Sistah'}
-                    hours={'Monday thru Friday: 10:00am -  2:00pm\n Holmes Hall'}
-                    description={'Serves Korean-inspired local cuisine.'}
-                    numReviews={27}
-                    numLikes={75}
-                />
+              <FoodCard
+                  image={'http://www.iwi.center/wp-content/uploads/2018/04/food.jpg'}
+                  title={'Veggie Salad'}
+                  hours={'The Sistah'}
+                  description={'Delicious salad.'}
+                  numReviews={27}
+                  numLikes={75}
+              />
+              <FoodCard
+                  image={'http://www.iwi.center/wp-content/uploads/2018/04/food.jpg'}
+                  title={'Different Veggie Salad'}
+                  hours={'The Sistah'}
+                  description={'Better salad.'}
+                  numReviews={1000}
+                  numLikes={750}
+              />
+              <FoodCard
+                  image={'http://www.iwi.center/wp-content/uploads/2018/04/food.jpg'}
+                  title={'Best Veggie Salad'}
+                  hours={'The Sistah'}
+                  description={'Even better salad.'}
+                  numReviews={2}
+                  numLikes={1}
+              />
             </Grid.Row>
           </Grid>
         </div>
-  );
+    );
   }
-  }
+}
 
-  export default TopPicks;
+export default TopPicks;

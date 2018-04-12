@@ -17,6 +17,7 @@ import Signout from '../pages/Signout';
 import TopPicks from '../pages/TopPicks';
 import UserProfile from '../pages/UserProfile';
 import AddVendor from '../pages/AddVendor';
+import FoodsAvailable from '../pages/FoodsAvailable';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -25,18 +26,19 @@ class App extends React.Component {
         <Router>
           <div>
             <Switch>
-              <Route exact path="/" component={Landing}/>
-              <Route path='/TopPicks' component={TopPicks}/>
-              <Route path="/signin" component={Signin}/>
-              <Route path="/signup" component={Signup}/>
-              <Route path="/userprofile" component={UserProfile}/>
-              <Route path="/addvendor" component={AddVendor}/>
-              <ProtectedRoute path="/list" component={ListStuff}/>
-              <ProtectedRoute path="/add" component={AddStuff}/>
-              <ProtectedRoute path="/edit/:_id" component={EditStuff}/>
-              <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
-              <ProtectedRoute path="/signout" component={Signout}/>
-              <Route component={NotFound}/>
+              <Route exact path="/" component={Landing} />
+              <Route path='/TopPicks' component={TopPicks} />
+              <Route path='/FoodsAvailable' component={FoodsAvailable} />
+              <Route path="/signin" component={Signin} />
+              <Route path="/signup" component={Signup} />
+              <Route path="/userprofile" component={UserProfile} />
+              <Route path="/addvendor" component={AddVendor} />
+              <ProtectedRoute path="/list" component={ListStuff} />
+              <ProtectedRoute path="/add" component={AddStuff} />
+              <ProtectedRoute path="/edit/:_id" component={EditStuff} />
+              <AdminProtectedRoute path="/admin" component={ListStuffAdmin} />
+              <ProtectedRoute path="/signout" component={Signout} />
+              <Route component={NotFound} />
             </Switch>
           </div>
         </Router>
