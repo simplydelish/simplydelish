@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Form, Grid, Button } from 'semantic-ui-react';
+import { Container, Form, Grid } from 'semantic-ui-react';
 
 const priceoptions = [
   { key: '$', text: '$', value: '$' },
