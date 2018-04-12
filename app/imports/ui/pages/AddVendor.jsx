@@ -12,7 +12,7 @@ const cityoptions = [
 ];
 
 /** A simple static component to render some text for the landing page. */
-class AddVendor extends React.Component {
+export default class AddVendor extends React.Component {
   state = {};
   handleChange = (e, { value }) => this.setState({ value });
 
@@ -40,42 +40,42 @@ class AddVendor extends React.Component {
               <Grid.Column>
                 <Form.Group grouped>
                   <label>Delivery: </label>
-                  <Form.Field label='Yes' control='input' type='radio'/>
-                  <Form.Field label='No' control='input' type='radio'/>
+                  <Form.Field label='Yes' control='input' type='radio' name='htmlRadios'/>
+                  <Form.Field label='No' control='input' type='radio' name='htmlRadios'/>
                 </Form.Group>
 
                 <Form.Group grouped>
                   <label>Accepts Credit Cards: </label>
-                  <Form.Field label='Yes' control='input' type='radio'/>
-                  <Form.Field label='No' control='input' type='radio'/>
+                  <Form.Field label='Yes' control='input' type='radio' name='htmlRadios'/>
+                  <Form.Field label='No' control='input' type='radio' name='htmlRadios'/>
                 </Form.Group>
               </Grid.Column>
 
               <Grid.Column>
                 <Form.Group grouped>
                   <label>Wifi: </label>
-                  <Form.Field label='Yes' control='input' type='radio'/>
-                  <Form.Field label='No' control='input' type='radio'/>
+                  <Form.Field label='Yes' control='input' type='radio' name='htmlRadios'/>
+                  <Form.Field label='No' control='input' type='radio' name='htmlRadios'/>
                 </Form.Group>
 
                 <Form.Group grouped>
                   <label>Alcohol: </label>
-                  <Form.Field label='Yes' control='input' type='radio'/>
-                  <Form.Field label='No' control='input' type='radio'/>
+                  <Form.Field label='Yes' control='input' type='radio' name='htmlRadios'/>
+                  <Form.Field label='No' control='input' type='radio' name='htmlRadios'/>
                 </Form.Group>
               </Grid.Column>
 
               <Grid.Column>
                 <Form.Group grouped>
                   <label>Take Out: </label>
-                  <Form.Field label='Yes' control='input' type='radio'/>
-                  <Form.Field label='No' control='input' type='radio'/>
+                  <Form.Field label='Yes' control='input' type='radio' name='htmlRadios'/>
+                  <Form.Field label='No' control='input' type='radio' name='htmlRadios'/>
                 </Form.Group>
 
                 <Form.Group grouped>
                   <label>Parking: </label>
-                  <Form.Field label='Private Lot' control='input' type='radio'/>
-                  <Form.Field label='Street' control='input' type='radio'/>
+                  <Form.Field label='Private Lot' control='input' type='radio' name='htmlRadios'/>
+                  <Form.Field label='Street' control='input' type='radio' name='htmlRadios'/>
                 </Form.Group>
               </Grid.Column>
 
@@ -96,5 +96,3 @@ class AddVendor extends React.Component {
     );
   }
 }
-
-export default AddVendor;
