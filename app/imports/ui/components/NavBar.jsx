@@ -9,7 +9,7 @@ import { Roles } from 'meteor/alanning:roles';
 /** The NavBar appears at the top of every page. Rendered by the App Layout component. */
 class NavBar extends React.Component {
   render() {
-    const menuStyle = { marginBottom: '10px' };
+    const menuStyle = { marginBottom: '10px', background: "#f15a29"};
     return (
         <Menu style={menuStyle} attached="top" borderless inverted>
           <Menu.Item as={NavLink} activeClassName="" exact to="/">
@@ -19,9 +19,9 @@ class NavBar extends React.Component {
           {/*TEST LINKS FOR M1 PAGES*/}
           <Menu.Item as={NavLink} activeClassName="active" exact to="/userprofile" key='userprofile'>User Profile</Menu.Item>
           <Menu.Item as={NavLink} activeClassName="active" exact to="/addvendor" key='addvendor'>Add Vendor</Menu.Item>
-          <Menu.Item as={NavLink} activeClassName="active" exact to="/toppicks" key='addvendor'>Top Picks</Menu.Item>
-          <Menu.Item as={NavLink} activeClassName="active" exact to="/foodsavailable" key='addvendor'>Foods Available</Menu.Item>
-          <Menu.Item as={NavLink} activeClassName="active" exact to="/vendorhomepage" key='addvendor'>Vendor Home</Menu.Item>
+          <Menu.Item as={NavLink} activeClassName="active" exact to="/toppicks" key='toppicks'>Top Picks</Menu.Item>
+          <Menu.Item as={NavLink} activeClassName="active" exact to="/foodsavailable" key='foodsavailable'>Foods Available</Menu.Item>
+          <Menu.Item as={NavLink} activeClassName="active" exact to="/vendorhomepage" key='vendorhomepage'>Vendor Home</Menu.Item>
           {/*TEST LINKS FOR M1 PAGES*/}
 
 

@@ -6,7 +6,7 @@ import FoodCard from '../components/FoodCard';
 class FoodsAvailable extends React.Component {
   render() {
     return (
-        <div>
+        <div className='background'>
           <Grid centered>
             <Grid.Row>
               <FoodCard
