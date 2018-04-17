@@ -9,5 +9,32 @@
     { "name": "Bicycle", "quantity": 2, "owner": "john@foo.com", "condition": "poor" },
     { "name": "Banana", "quantity": 2, "owner": "admin@foo.com", "condition": "good" },
     { "name": "Boogie Board", "quantity": 2, "owner": "admin@foo.com", "condition": "excellent" }
+  ],
+
+  "defaultVendors": [
+    {
+      "image": "/images/sistah.png",
+      "title": "The Sistah",
+      "hours": "Monday thru Friday: 10:00am -  2:00pm \n Holmes Hall",
+      "description": "Serves Korean-inspired local cuisine.",
+      "numReviews": 27,
+      "numLikes": 75
+    },
+    {
+      "image": "/images/banan.png",
+      "title": "Banan",
+      "hours": "Monday thru Friday: 9:00am -  4:30pm \n POST",
+      "description": "Serves Healthy-inspired cuisine.",
+      "numReviews": 50,
+      "numLikes": 1
+    },
+    {
+      "image": "/images/lecrepe.png",
+      "title": "Le Crepe",
+      "hours": "Monday thru Friday: 7:45am -  2:15pm \n Sinclair Library",
+      "description": "Serves All Kine crepe cuisine.",
+      "numReviews": 2,
+      "numLikes": 1000
+    }
   ]
 }
