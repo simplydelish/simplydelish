@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Card, Image, Icon } from 'semantic-ui-react';
 
-class FoodCard extends React.Component {
+class VendorCard extends React.Component {
 
   render() {
     const starStyle = { color: '#f7941d' };
@@ -12,8 +12,8 @@ class FoodCard extends React.Component {
         <Card style={cardStyle}>
           <Image src={this.props.image} />
           <Card.Content>
-            <Card.Header>{this.props.itemName}</Card.Header>
-            <Card.Meta>{this.props.vendorName}</Card.Meta>
+            <Card.Header>{this.props.title}</Card.Header>
+            <Card.Meta>{this.props.hours}</Card.Meta>
             <Card.Content description={this.props.description}/>
           </Card.Content>
           <Card.Content extra>
@@ -31,13 +31,13 @@ class FoodCard extends React.Component {
   }
 }
 
-FoodCard.propTypes = {
+VendorCard.propTypes = {
   image: PropTypes.string,
-  itemName: PropTypes.string,
-  vendorName: PropTypes.string,
+  title: PropTypes.string,
+  hours: PropTypes.string,
   description: PropTypes.string,
   numReviews: PropTypes.number,
   numLikes: PropTypes.number,
 };
 
-export default FoodCard;
+export default VendorCard;

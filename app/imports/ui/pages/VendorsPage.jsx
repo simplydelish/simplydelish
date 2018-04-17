@@ -1,12 +1,12 @@
 import { Grid, Loader } from 'semantic-ui-react';
 import React from 'react';
-import FoodCard from '../components/FoodCard';
+import VendorCard from '../components/VendorCard';
 import { Vendors } from '/imports/api/vendor/vendor';
 import { Meteor } from 'meteor/meteor';
 import PropTypes from 'prop-types';
 import { withTracker } from 'meteor/react-meteor-data';
 
-class FoodsAvailable extends React.Component {
+class VendorsPage extends React.Component {
 
   render() {
     return (this.props.ready) ? this.renderPage() : <Loader>Getting data</Loader>;
@@ -18,7 +18,7 @@ class FoodsAvailable extends React.Component {
           <Grid centered>
             <Grid.Row>
               {this.props.vendors.map((vendor) =>
-                  <FoodCard
+                  <VendorCard
                       key={vendor._id}
                       image={vendor.image}
                       title={vendor.title}
@@ -34,7 +34,7 @@ class FoodsAvailable extends React.Component {
   }
 }
 
-FoodsAvailable.propTypes = {
+VendorsPage.propTypes = {
   vendors: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
 };
@@ -45,4 +45,4 @@ export default withTracker(() => {
     vendors: Vendors.find({}).fetch(),
     ready: subscription.ready(),
   };
-})(FoodsAvailable);
+})(VendorsPage);
