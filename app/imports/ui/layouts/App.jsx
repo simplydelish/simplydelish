@@ -19,7 +19,7 @@ import Signout from '../pages/Signout';
 import TopPicks from '../pages/TopPicks';
 import UserProfile from '../pages/UserProfile';
 import AddVendor from '../pages/AddVendor';
-import FoodsAvailable from '../pages/FoodsAvailable';
+import VendorsPage from '../pages/VendorsPage';
 import VendorHomePage from '../pages/VendorHomePage';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
@@ -32,7 +32,7 @@ class App extends React.Component {
             <Switch>
               <Route exact path="/" component={Landing} />
               <Route path='/toppicks' component={TopPicks} />
-              <Route path='/foodsavailable' component={FoodsAvailable} />
+              <Route path='/vendors' component={VendorsPage} />
               <Route path="/signin" component={Signin} />
               <Route path="/signup" component={Signup} />
               <Route path="/userprofile" component={UserProfile} />
