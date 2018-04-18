@@ -19,7 +19,6 @@ export default class AddVendor extends React.Component {
   render() {
     const { value } = this.state;
     return (
-        <div className='background'>
           <Container>
             <Form>
               <Form.Group widths='equal'>
@@ -94,7 +93,6 @@ export default class AddVendor extends React.Component {
               <Form.Button fluid>Submit</Form.Button>
             </Form>
           </Container>
-        </div>
     );
   }
 }

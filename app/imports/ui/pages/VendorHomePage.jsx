@@ -5,7 +5,6 @@ import { Grid, Header, Form, Card, Image, Button } from 'semantic-ui-react';
 class VendorHomePage extends React.Component {
   render() {
     return (
-        <div className='background'>
           <Grid>
             <Grid.Row>
               <Grid.Column width={4} style={{ marginLeft: '150px' }}>
@@ -76,7 +75,6 @@ class VendorHomePage extends React.Component {
 
             </Grid.Row>
           </Grid>
-        </div>
     );
   }
 }

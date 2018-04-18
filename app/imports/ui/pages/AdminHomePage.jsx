@@ -5,7 +5,6 @@ import { Grid, Header, Card, Image, Button, Container } from 'semantic-ui-react'
 class Landing extends React.Component {
   render() {
     return (
-        <div className='background'>
           <Container>
             <Grid columns={2} centered celled='internally'>
               <Grid.Column>
@@ -147,7 +146,6 @@ class Landing extends React.Component {
 
             </Grid>
           </Container>
-        </div>
     );
   }
 }
