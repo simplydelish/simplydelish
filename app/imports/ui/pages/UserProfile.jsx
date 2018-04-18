@@ -11,7 +11,6 @@ const foodtasteoptions = [
 export default class UserProfile extends React.Component {
   render() {
     return (
-        <div className='background'>
           <Container>
             <Grid columns={2} centered celled='internally'>
               <Grid.Row>
@@ -82,7 +81,6 @@ export default class UserProfile extends React.Component {
               </Grid.Row>
             </Grid>
           </Container>
-        </div>
     );
   }
 }

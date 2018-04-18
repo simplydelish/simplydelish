@@ -14,7 +14,6 @@ class VendorsPage extends React.Component {
 
   renderPage() {
     return (
-        <div className='background'>
           <Grid centered>
             <Grid.Row>
               {this.props.vendors.map((vendor) =>
@@ -29,7 +28,6 @@ class VendorsPage extends React.Component {
                   />)}
             </Grid.Row>
           </Grid>
-        </div>
     );
   }
 }

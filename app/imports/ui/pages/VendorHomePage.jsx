@@ -9,7 +9,6 @@ import { Foods } from '/imports/api/food/food';
 class VendorHomePage extends React.Component {
   render() {
     return (
-        <div className='background'>
           <Grid>
             <Grid.Column width={4} style={{ marginLeft: '150px' }}>
               <Card>
@@ -68,7 +67,6 @@ class VendorHomePage extends React.Component {
 
             </Grid.Row>
           </Grid>
-        </div>
     );
   }
 }
