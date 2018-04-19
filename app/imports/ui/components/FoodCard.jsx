@@ -17,7 +17,7 @@ class FoodCard extends React.Component {
             <Card.Content description={this.props.description}/>
           </Card.Content>
           <Card.Content extra>
-            <span className='right floated'>
+            <span className='left floated'>
               <Icon name={'star'} style={starStyle} />
               {this.props.numReviews} Reviews
             </span>
