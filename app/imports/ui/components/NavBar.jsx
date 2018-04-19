@@ -16,22 +16,20 @@ class NavBar extends React.Component {
             <Header inverted as='h1'>Simply Delish</Header>
           </Menu.Item>
 
-          {/*TEST LINKS FOR M1 PAGES*/}
-          <Menu.Item as={NavLink} activeClassName="active" exact to="/userprofile" key='userprofile'>User Profile</Menu.Item>
-          <Menu.Item as={NavLink} activeClassName="active" exact to="/addvendor" key='addvendor'>Add Vendor</Menu.Item>
           <Menu.Item as={NavLink} activeClassName="active" exact to="/toppicks" key='toppicks'>Top Picks</Menu.Item>
-          <Menu.Item as={NavLink} activeClassName="active" exact to="/vendors" key='vendors'>Vendors</Menu.Item>
-          <Menu.Item as={NavLink} activeClassName="active" exact to="/vendorhomepage" key='vendorhomepage'>Vendor Home</Menu.Item>
-          {/*TEST LINKS FOR M1 PAGES*/}
-
+          <Menu.Item as={NavLink} activeClassName="active" exact to="/vendors" key='list'>Vendors</Menu.Item>
 
           {this.props.currentUser ? (
-              [<Menu.Item as={NavLink} activeClassName="active" exact to="/add" key='add'>Add Stuff</Menu.Item>,
-                <Menu.Item as={NavLink} activeClassName="active" exact to="/list" key='list'>List Stuff</Menu.Item>]
+              <Menu.Item as={NavLink} activeClassName="active" exact to="/userprofile" key='userprofile'>User Profile</Menu.Item>
+          ) : ''}
+          {Roles.userIsInRole(Meteor.userId(), 'vendor') ? (
+              <Menu.Item as={NavLink} activeClassName="active" exact to="/vendorhomepage" key='vendorhomepage'>Vendor Home</Menu.Item>
           ) : ''}
           {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
-              <Menu.Item as={NavLink} activeClassName="active" exact to="/admin" key='admin'>Admin</Menu.Item>
+              <Menu.Item as={NavLink} activeClassName="active" exact to="/addvendor" key='addvendor'>Add Vendor</Menu.Item>
           ) : ''}
+
+
           <Menu.Item position="right">
             {this.props.currentUser === '' ? (
                 <Dropdown text="Login" pointing="top right" icon={'user'}>

@@ -35,9 +35,9 @@ class App extends React.Component {
               <Route path='/vendors' component={VendorsPage} />
               <Route path="/signin" component={Signin} />
               <Route path="/signup" component={Signup} />
-              <Route path="/userprofile" component={UserProfile} />
-              <Route path="/addvendor" component={AddVendor} />
-              <Route path='/vendorhomepage' component={VendorHomePage} />
+              <ProtectedRoute path="/userprofile" component={UserProfile} />
+              <AdminProtectedRoute path="/addvendor" component={AddVendor} />
+              <VendorProtectedRoute path='/vendorhomepage' component={VendorHomePage} />
               <AdminProtectedRoute path="/AdminHomePage" component={AdminHomePage} />
               <ProtectedRoute path="/list" component={ListStuff} />
               <ProtectedRoute path="/add" component={AddStuff} />
@@ -89,6 +89,25 @@ const AdminProtectedRoute = ({ component: Component, ...rest }) => (
     />
 );
 
+/**
+ * UserProtectedRoute (see React Router v4 sample)
+ * Checks for Meteor login and admin role before routing to the requested page, otherwise goes to signin page.
+ * @param {any} { component: Component, ...rest }
+ */
+const VendorProtectedRoute = ({ component: Component, ...rest }) => (
+    <Route
+        {...rest}
+        render={(props) => {
+          const isLogged = Meteor.userId() !== null;
+          const isVendor = Roles.userIsInRole(Meteor.userId(), 'vendor');
+          return (isLogged && isVendor) ?
+              (<Component {...props} />) :
+              (<Redirect to={{ pathname: '/signin', state: { from: props.location } }}/>
+              );
+        }}
+    />
+);
+
 /** Require a component and location to be passed to each ProtectedRoute. */
 ProtectedRoute.propTypes = {
   component: PropTypes.func.isRequired,
@@ -100,5 +119,12 @@ AdminProtectedRoute.propTypes = {
   component: PropTypes.func.isRequired,
   location: PropTypes.object,
 };
+
+/** Require a component and location to be passed to each VendorProtectedRoute. */
+VendorProtectedRoute.propTypes = {
+  component: PropTypes.func.isRequired,
+  location: PropTypes.object,
+};
+
 
 export default App;
