@@ -71,6 +71,7 @@ class VendorHomePage extends React.Component {
   }
 }
 
+
 VendorHomePage.propTypes = {
   foods: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
