@@ -10,7 +10,7 @@ export default class Content extends React.Component {
     const aboutColor = {backgroundColor: "white",  boxShadow: "none",
       border: "none", margin: "2rem 183px"};
     const text = {color: "black", fontSize: "18.5px"};
-    const pretty = {padding: "40px" , background: "white", width: "100%"};
+    const pretty = {padding: "8px" , background: "white", width: "100%"};
     return (
         <Container  style={pretty}>
         <Segment textAlign="center" style={aboutColor}>
