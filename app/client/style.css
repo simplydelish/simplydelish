@@ -2,3 +2,109 @@
   background: url('/images/doodle.png') no-repeat center center fixed;
   background-size: cover;
 }
+
+
+.ui.topmenu.menu {
+  background-color: transparent;
+  margin: 0px;
+  border-radius: 0px;
+}
+
+.footer-background {
+  background-color: #f96d21;
+  color: white;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.footer-one {
+  font-size: 25px;
+}
+
+.ui.menu .item {
+  color: #ccc;
+  font-size: 10px;
+}
+
+.ui.header>.icon{
+  font-size: 1em;
+}
+
+@keyframes slider {
+  0%{
+    left: 0;
+  }
+  20%{
+    left: 0;
+  }
+  25%{
+    left: -100%;
+  }
+  45%{
+    left: -100%;
+  }
+  50%{
+    left: -200%;
+  }
+  70%{
+    left: -200%;
+  }
+  75%{
+    left: -300%;
+  }
+  95%{
+    left: -300%;
+  }
+  100%{
+    left: -400%;
+  }
+}
+
+#slider{
+  overflow: hidden;
+}
+
+#slider figure img{
+  width: 20%;
+  float: left;
+}
+
+#slider figure{
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  animation: 19s slider infinite;
+}
+/**/
+
+
+
+.ui[class*="center aligned"].container {
+  text-align: center;
+  background: #f96d21;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  color: white;
+  width: 100%;
+}
+
+h1.ui.header {
+  font-size: 2rem;
+  color: white;
+}
+
+.ui.menu {
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  font-weight: 550;
+
+}
+
+.ui.segment {
+  box-shadow: none;
+  border: none;
+  -webkit-box-shadow: none;
+  margin: 2rem 183px;
+}

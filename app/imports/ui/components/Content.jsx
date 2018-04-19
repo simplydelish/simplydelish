@@ -1,5 +1,6 @@
 import React from 'react';
-import './style.css';
+import 'semantic-ui-css/semantic.css';
+
 import 'semantic-ui-css/semantic.min.css';
 import { Segment } from 'semantic-ui-react';
 

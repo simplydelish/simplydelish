@@ -15,6 +15,7 @@ import NotFound from '../pages/NotFound';
 import Signin from '../pages/Signin';
 import Signup from '../pages/Signup';
 import Signout from '../pages/Signout';
+import Footer2 from '../components/Footer2';
 
 import TopPicks from '../pages/TopPicks';
 import UserProfile from '../pages/UserProfile';
@@ -46,6 +47,7 @@ class App extends React.Component {
               <ProtectedRoute path="/signout" component={Signout} />
               <Route component={NotFound} />
             </Switch>
+            <Footer2/>
           </div>
         </Router>
     );
