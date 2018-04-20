@@ -23,7 +23,7 @@
 
 .ui.menu .item {
   color: #ccc;
-  font-size: 10px;
+  font-size: 1em;
 }
 
 .ui.header>.icon{
@@ -76,9 +76,6 @@
   left: 0;
   animation: 19s slider infinite;
 }
-/**/
-
-
 
 .ui[class*="center aligned"].container {
   text-align: center;
@@ -98,8 +95,7 @@ h1.ui.header {
   border: none;
   -webkit-box-shadow: none;
   box-shadow: none;
-  font-weight: 550;
-
+  font-weight: 600;
 }
 
 .ui.segment {
