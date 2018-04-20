@@ -17,25 +17,19 @@
       "image": "/images/sistah_truck.png",
       "title": "Sistah",
       "hours": "Monday thru Friday: 10:00am -  2:00pm \n Holmes Hall",
-      "description": "Serves Korean-inspired local cuisine.",
-      "numReviews": 27,
-      "numLikes": 75
+      "description": "Serves Korean-inspired local cuisine."
     },
     {
       "image": "/images/banan_building.png",
       "title": "Banan",
       "hours": "Monday thru Friday: 9:00am -  4:30pm \n POST",
-      "description": "Serves Healthy-inspired cuisine.",
-      "numReviews": 50,
-      "numLikes": 1
+      "description": "Serves Healthy-inspired cuisine."
     },
     {
       "image": "/images/le_crepe_building.png",
       "title": "Le Crepe",
       "hours": "Monday thru Friday: 7:45am -  2:15pm \n Sinclair Library",
-      "description": "Serves All Kine crepe cuisine.",
-      "numReviews": 2,
-      "numLikes": 1000
+      "description": "Serves All Kine crepe cuisine."
     }
   ],
 
@@ -45,24 +39,33 @@
       "itemName": "Super-Loco Loco-Moco",
       "vendorName": "The Sistah",
       "description": "Hamburger patty, egg, rice, and gravy. A local favorite.",
-      "numReviews": 27,
-      "numLikes": 75
+      "numLikes": 75,
+      "tags": [
+        "vegan",
+        "vegitarian"
+      ]
     },
     {
       "image": "/images/banan.png",
       "itemName": "Banana Swirl",
       "vendorName": "Banan",
       "description": "Frozen banana swirl topped with strawberries.",
-      "numReviews": 50,
-      "numLikes": 1
+      "numLikes": 1,
+      "tags": [
+        "gluten free",
+        "dairy free"
+      ]
     },
     {
       "image": "/images/lecrepe.png",
       "itemName": "Strawberry & Chocolate Drizzle",
       "vendorName": "Le Crepe",
       "description": "For those chocolate strawberry lovers.",
-      "numReviews": 2,
-      "numLikes": 1000
+      "numLikes": 1000,
+      "tags": [
+        "vegitarian",
+        "vegan"
+      ]
     }
   ]
 }

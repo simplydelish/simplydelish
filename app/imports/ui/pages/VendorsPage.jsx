@@ -23,8 +23,6 @@ class VendorsPage extends React.Component {
                       title={vendor.title}
                       hours={vendor.hours}
                       description={vendor.description}
-                      numReviews={vendor.numReviews}
-                      numLikes={vendor.numLikes}
                   />)}
             </Grid.Row>
           </Grid>

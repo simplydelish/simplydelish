@@ -11,8 +11,6 @@ const VendorSchema = new SimpleSchema({
   title: String,
   hours: String,
   description: String,
-  numReviews: Number,
-  numLikes: Number,
 }, { tracker: Tracker });
 
 /** Attach this schema to the collection. */

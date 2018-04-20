@@ -1,11 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Card, Image, Icon } from 'semantic-ui-react';
+import { Card, Image, Icon, Label } from 'semantic-ui-react';
 
 class FoodCard extends React.Component {
 
   render() {
-    const starStyle = { color: '#f7941d' };
     const heartStyle = { color: '#be1e2d' };
     const cardStyle = { margin: '3em' };
     return (
@@ -17,14 +16,15 @@ class FoodCard extends React.Component {
             <Card.Content description={this.props.description}/>
           </Card.Content>
           <Card.Content extra>
-            <span className='left floated'>
-              <Icon name={'star'} style={starStyle} />
-              {this.props.numReviews} Reviews
-            </span>
             <span className='right floated'>
               <Icon name={'heart'} style={heartStyle} />
               {this.props.numLikes} Likes
             </span>
+          </Card.Content>
+          <Card.Content extra>
+            {this.props.tags.map((foodTag) =>
+                <Label as='a' key={foodTag} tag>{foodTag}</Label>
+            )}
           </Card.Content>
         </Card>
     );
@@ -36,8 +36,8 @@ FoodCard.propTypes = {
   itemName: PropTypes.string,
   vendorName: PropTypes.string,
   description: PropTypes.string,
-  numReviews: PropTypes.number,
   numLikes: PropTypes.number,
+  tags: PropTypes.array,
 };
 
 export default FoodCard;

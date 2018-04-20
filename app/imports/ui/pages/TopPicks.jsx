@@ -11,15 +11,15 @@ class TopPicks extends React.Component {
         <div className='background'>
           <Grid centered>
             <Grid.Row>
-              {this.props.foods.map((vendor) =>
+              {this.props.foods.map((food) =>
                   <FoodCard
-                      key={vendor._id}
-                      image={vendor.image}
-                      itemName={vendor.itemName}
-                      vendorName={vendor.vendorName}
-                      description={vendor.description}
-                      numReviews={vendor.numReviews}
-                      numLikes={vendor.numLikes}
+                      key={food._id}
+                      image={food.image}
+                      itemName={food.itemName}
+                      vendorName={food.vendorName}
+                      description={food.description}
+                      numLikes={food.numLikes}
+                      tags={food.tags}
                   />)}
             </Grid.Row>
           </Grid>
