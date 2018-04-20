@@ -6,6 +6,7 @@ import { withTracker } from 'meteor/react-meteor-data';
 import { Foods } from '/imports/api/food/food';
 
 class TopPicks extends React.Component {
+
   render() {
     return (
         <div className='background'>
@@ -36,7 +37,7 @@ TopPicks.propTypes = {
 export default withTracker(() => {
   const subscription = Meteor.subscribe('Foods');
   return {
-    foods: Foods.find({}).fetch(),
+    foods: Foods.find({}, {sort: {numLikes: -1}}).fetch(),
     ready: subscription.ready(),
   };
 })(TopPicks);
