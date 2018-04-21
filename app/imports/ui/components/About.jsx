@@ -1,7 +1,5 @@
 import React from 'react';
 import 'semantic-ui-css/semantic.css';
-
-import 'semantic-ui-css/semantic.min.css';
 import { Container, Header } from 'semantic-ui-react';
 
 export default class About extends React.Component {

@@ -21,6 +21,13 @@ class NavBar extends React.Component {
 
 
           <Menu.Item position="right">
+
+            /** user homepage works, just didn't know how
+             *  to implement it here
+            * the simplydelish should update to link with userhome rather
+            * than landing
+            * **/
+
             {this.props.currentUser ? (
                 <Menu.Item position="right" as={NavLink} activeClassName="active" exact to="/userprofile" key='userprofile'><Icon name='user circle' />User Profile</Menu.Item>
             ) : ''}
