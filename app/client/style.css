@@ -1,3 +1,112 @@
+@media screen and (max-width: 992px) {
+
+  .ui.search {
+    margin: 195px auto;
+    left: 40%;
+  }
+}
+
+@media screen and (max-width: 1635px) {
+
+  .ui.search {
+    margin: 355px auto;
+    left: 42%;
+  }
+}
+
+@media screen and (max-width: 1480px) {
+
+  .ui.search {
+    margin: 320px auto;
+    left: 42%;
+  }
+}
+
+
+@media screen and (max-width: 1330px) {
+
+  .ui.search {
+    margin: 300px auto;
+    left: 40%;
+  }
+}
+
+
+@media screen and (max-width: 1115px) {
+
+  .ui.search {
+    margin: 270px auto;
+    left: 40%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+
+  .ui.search {
+    margin: 240px auto;
+    left: 40%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+
+  .ui.search {
+    margin: 200px auto;
+    left: 40%;
+  }
+}
+
+
+@media screen and (max-width: 960px) {
+
+  .ui.search {
+    margin: 220px auto;
+    left: 40%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+
+  .ui.search {
+    margin: 180px auto;
+    left: 40%;
+  }
+}
+
+@media screen and (max-width: 730px) {
+
+  .ui.search {
+    margin: 115px auto;
+    left: 38%;
+  }
+}
+
+@media screen and (max-width: 560px) {
+
+  .ui.search {
+    margin: 100px auto;
+    left: 30%;
+  }
+}
+
+@media screen and (max-width: 440px) {
+
+  .ui.search {
+    margin: 100px auto;
+    left: 20%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+
+  .ui.search {
+    margin: 73px auto;
+    left: 20%;
+  }
+}
+
+
+
 .background {
   background: url('/images/doodle.png') no-repeat center center fixed;
   background-size: cover;
@@ -103,4 +212,13 @@ h1.ui.header {
   border: none;
   -webkit-box-shadow: none;
   margin: 2rem 183px;
+}
+
+.ui.icon.input>input {
+  padding: 1.3em 5em;
+}
+
+.ui.search .prompt~.search.icon {
+  font-size: 1.3em;
+  color: #f15a29;
 }
