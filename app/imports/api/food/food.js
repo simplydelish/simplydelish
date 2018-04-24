@@ -9,10 +9,10 @@ const Foods = new Mongo.Collection('Foods');
 const FoodSchema = new SimpleSchema({
   image: String,
   itemName: String,
-  vendorName: String,
+  vendorName: { type: String, optional: true },
   description: String,
-  numReviews: Number,
-  numLikes: Number,
+  numReviews: { type: Number, optional: true },
+  numLikes: { type: Number, optional: true },
 }, { tracker: Tracker });
 
 /** Attach this schema to the collection. */
