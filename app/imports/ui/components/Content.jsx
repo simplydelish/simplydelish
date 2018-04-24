@@ -8,7 +8,7 @@ export default class Content extends React.Component {
 
   render() {
     const aboutColor = {backgroundColor: "white",  boxShadow: "none",
-      border: "none", margin: "2rem 183px"};
+      border: "none", margin: "2rem 130px"};
     const text = {color: "black", fontSize: "18.5px"};
     const pretty = {padding: "8px" , background: "white", width: "100%"};
     return (
