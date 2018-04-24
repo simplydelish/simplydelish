@@ -67,5 +67,10 @@
         "vegan"
       ]
     }
-  ]
+  ],
+  "galaxy.meteor.com": { 
+    "env": { 
+      "MONGO_URL": "mongodb://testuser:testpassword@ds241039.mlab.com:41039/appdb" 
+    }
+  }
 }
