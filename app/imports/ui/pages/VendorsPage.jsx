@@ -5,6 +5,7 @@ import { Vendors } from '/imports/api/vendor/vendor';
 import { Meteor } from 'meteor/meteor';
 import PropTypes from 'prop-types';
 import { withTracker } from 'meteor/react-meteor-data';
+import VendorHead from '../components/VendorHead';
 
 class VendorsPage extends React.Component {
 
@@ -13,9 +14,12 @@ class VendorsPage extends React.Component {
   }
 
   renderPage() {
+    const paddingAdjust = {paddingTop: "45px", paddingBottom: "57px"};
     return (
+        <div >
+          <VendorHead/>
           <Grid centered>
-            <Grid.Row>
+            <Grid.Row style={paddingAdjust}>
               {this.props.vendors.map((vendor) =>
                   <VendorCard
                       key={vendor._id}
@@ -26,6 +30,7 @@ class VendorsPage extends React.Component {
                   />)}
             </Grid.Row>
           </Grid>
+        </div>
     );
   }
 }
