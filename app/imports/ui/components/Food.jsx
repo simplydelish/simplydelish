@@ -10,7 +10,7 @@ export default class Food extends React.Component {
       border: "none", background: "transparent"};
     const starC = {color: "#f7941d"};
     const heartC = {color: "#be1e2d"};
-    const cardStyle = {width: "340px",};
+    const cardStyle = {width: "290px", maxWidth: "100%"};
     const paddingFix = {padding: "5em"};
 
     return (
