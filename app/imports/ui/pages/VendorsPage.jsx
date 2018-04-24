@@ -5,6 +5,7 @@ import { Vendors } from '/imports/api/vendor/vendor';
 import { Meteor } from 'meteor/meteor';
 import PropTypes from 'prop-types';
 import { withTracker } from 'meteor/react-meteor-data';
+import VendorMenu from '/imports/ui/pages/VendorMenu';
 
 class VendorsPage extends React.Component {
 
@@ -12,20 +13,28 @@ class VendorsPage extends React.Component {
     return (this.props.ready) ? this.renderPage() : <Loader>Getting data</Loader>;
   }
 
+  displayMenu(vendorName) {
+
+  }
+
   renderPage() {
     return (
-          <Grid centered>
-            <Grid.Row>
-              {this.props.vendors.map((vendor) =>
+        <Grid centered>
+          <Grid.Row>
+            {this.props.vendors.map((vendor) =>
+                <div key={vendor._id} onClick={() => {
+                  this.displayMenu(vendor.title)
+                }}>
                   <VendorCard
                       key={vendor._id}
                       image={vendor.image}
                       title={vendor.title}
                       hours={vendor.hours}
                       description={vendor.description}
-                  />)}
-            </Grid.Row>
-          </Grid>
+                  />
+                </div>)}
+          </Grid.Row>
+        </Grid>
     );
   }
 }
