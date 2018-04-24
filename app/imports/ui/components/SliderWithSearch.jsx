@@ -85,6 +85,7 @@ resultRenderer({ id, title }) {
           <Grid celled='internally'>
             <Grid.Row>
               <Search style={searchAdjust}
+                      placeholder='What do I want to eat?'
                       loading={isLoading}
                       resultRenderer={this.resultRenderer}
                       onSearchChange={this.handleSearchChange}

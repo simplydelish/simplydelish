@@ -6,6 +6,7 @@ import { Meteor } from 'meteor/meteor';
 import PropTypes from 'prop-types';
 import { withTracker } from 'meteor/react-meteor-data';
 import VendorMenu from '/imports/ui/pages/VendorMenu';
+import VendorHead from '../components/VendorHead';
 
 class VendorsPage extends React.Component {
 
@@ -18,9 +19,12 @@ class VendorsPage extends React.Component {
   }
 
   renderPage() {
+    const paddingAdjust = {paddingTop: "45px", paddingBottom: "57px"};
     return (
+        <div >
+          <VendorHead/>
         <Grid centered>
-          <Grid.Row>
+          <Grid.Row style={paddingAdjust}>
             {this.props.vendors.map((vendor) =>
                 <div key={vendor._id} onClick={() => {
                   this.displayMenu(vendor.title)
@@ -35,6 +39,7 @@ class VendorsPage extends React.Component {
                 </div>)}
           </Grid.Row>
         </Grid>
+        </div>
     );
   }
 }
