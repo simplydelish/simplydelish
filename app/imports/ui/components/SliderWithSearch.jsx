@@ -1,6 +1,6 @@
 import React from 'react';
 import 'semantic-ui-css/semantic.min.css';
-import { Image , Grid, Search} from 'semantic-ui-react';
+import { Image , Grid, Search, Header} from 'semantic-ui-react';
 import { render } from 'react-dom';
 
 
@@ -84,7 +84,9 @@ resultRenderer({ id, title }) {
         <div id="slider" style={marginFix}>
           <Grid celled='internally'>
             <Grid.Row>
+
               <Search style={searchAdjust}
+                      placeholder='What do I want to eat?'
                       loading={isLoading}
                       resultRenderer={this.resultRenderer}
                       onSearchChange={this.handleSearchChange}
