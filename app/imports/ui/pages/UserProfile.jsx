@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, Image, Container, Button, Form, Grid, Dropdown, Input } from 'semantic-ui-react';
+import UserHead from '../components/UserHead';
 
 const foodtasteoptions = [
   { key: 'taste option 1', text: 'taste option 1', value: 'taste option 1' },
@@ -7,11 +8,15 @@ const foodtasteoptions = [
   { key: 'taste option 3', text: 'taste option 3', value: 'taste option 3' },
 ];
 
+const paddFix = {paddingTop: "50px", paddingBottom: "134px"};
+
 /** A simple static component to render some text for the landing page. */
 export default class UserProfile extends React.Component {
   render() {
     return (
-          <Container>
+        <div>
+          <UserHead/>
+          <Container style={paddFix}>
             <Grid columns={2} centered celled='internally'>
               <Grid.Row>
                 <Grid.Column width={5}>
@@ -81,6 +86,7 @@ export default class UserProfile extends React.Component {
               </Grid.Row>
             </Grid>
           </Container>
+        </div>
     );
   }
 }
