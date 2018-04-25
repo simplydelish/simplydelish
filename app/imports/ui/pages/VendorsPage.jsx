@@ -19,7 +19,7 @@ class VendorsPage extends React.Component {
   }
 
   renderPage() {
-    const paddingAdjust = {paddingTop: "45px", paddingBottom: "57px"};
+    const paddingAdjust = {paddingTop: "45px", paddingBottom: "258px"};
     return (
         <div >
           <VendorHead/>
