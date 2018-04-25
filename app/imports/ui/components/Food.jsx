@@ -11,7 +11,7 @@ export default class Food extends React.Component {
     const starC = {color: "#f7941d"};
     const heartC = {color: "#be1e2d"};
     const cardStyle = {width: "290px", maxWidth: "100%"};
-    const paddingFix = {padding: "5em"};
+    const paddingFix = {padding: "4em"};
 
     return (
         <Segment textAlign="center" style={foodBack}>

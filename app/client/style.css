@@ -222,3 +222,8 @@ h1.ui.header {
   font-size: 1.3em;
   color: #f15a29;
 }
+
+.ui.form .field>label {
+  font-size: 1.2em;
+  font-color: darkred;
+}

@@ -8,7 +8,7 @@ const foodtasteoptions = [
   { key: 'taste option 3', text: 'taste option 3', value: 'taste option 3' },
 ];
 
-const paddFix = {paddingTop: "50px", paddingBottom: "134px"};
+const paddFix = {paddingTop: "50px", paddingBottom: "159px"};
 
 /** A simple static component to render some text for the landing page. */
 export default class UserProfile extends React.Component {
