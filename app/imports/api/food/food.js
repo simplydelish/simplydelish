@@ -11,8 +11,11 @@ const FoodSchema = new SimpleSchema({
   itemName: String,
   vendorName: { type: String, optional: true },
   description: String,
-  numReviews: { type: Number, optional: true },
   numLikes: { type: Number, optional: true },
+  tags: {
+    type: Array,
+  },
+  'tags.$': String,
 }, { tracker: Tracker });
 
 /** Attach this schema to the collection. */
