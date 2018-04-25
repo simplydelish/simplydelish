@@ -93,7 +93,7 @@ class VendorHomePage extends React.Component {
                     description={vendor.description}
                     numReviews={vendor.numReviews}
                     numLikes={vendor.numLikes}
-                    tags: []
+                    tags={vendor.tags}
                 />)}
           </Grid.Row>
         </Grid>
