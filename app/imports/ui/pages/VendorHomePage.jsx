@@ -8,7 +8,6 @@ import { Meteor } from "meteor/meteor";
 import AutoForm from 'uniforms-semantic/AutoForm';
 import TextField from 'uniforms-semantic/TextField';
 import SubmitField from 'uniforms-semantic/SubmitField';
-import HiddenField from 'uniforms-semantic/HiddenField';
 import ErrorsField from 'uniforms-semantic/ErrorsField';
 import { Bert } from 'meteor/themeteorchef:bert';
 
@@ -37,7 +36,7 @@ class VendorHomePage extends React.Component {
   /** On submit, insert the data. */
   submit(data) {
     const { image, itemName, description } = data;
-    Foods.insert({ image, itemName, description}, this.insertCallback);
+    Foods.insert({ image, itemName, description }, this.insertCallback);
   }
 
   render() {
@@ -91,8 +90,8 @@ class VendorHomePage extends React.Component {
                     itemName={vendor.itemName}
                     vendorName={vendor.vendorName}
                     description={vendor.description}
-                    numReviews={vendor.numReviews}
                     numLikes={vendor.numLikes}
+                    tags={vendor.tags}
                 />)}
           </Grid.Row>
         </Grid>
