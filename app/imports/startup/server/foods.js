@@ -1,5 +1,4 @@
 import { Meteor } from 'meteor/meteor';
-import { Roles } from 'meteor/alanning:roles';
 import { Foods } from '../../api/food/food.js';
 
 /** Initialize the database with a default data document. */
