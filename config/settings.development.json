@@ -67,5 +67,37 @@
         "vegan"
       ]
     }
+  ],
+  "defaultUsers": [
+    {
+      "image": "/images/default_user.jpg",
+      "email": "john@foo.com",
+      "firstName": "Karissa",
+      "lastName": "Hyunh",
+      "bio": "Sample Bio 0",
+      "instagram": "Instagram 0",
+      "twitter": "Twitter 0",
+      "facebook": "Facebook 0"
+    },
+    {
+      "image": "/images/default_user.jpg",
+      "email": "admin@foo.com",
+      "firstName": "Viali",
+      "lastName": "Ou",
+      "bio": "Sample Bio 1",
+      "instagram": "Instagram 1",
+      "twitter": "Twitter 1",
+      "facebook": "Facebook 1"
+    },
+    {
+      "image": "/images/default_user.jpg",
+      "email": "vendor@foo.com",
+      "firstName": "Josefina",
+      "lastName": "Fortin",
+      "bio": "Sample Bio 2",
+      "instagram": "Instagram 2",
+      "twitter": "Twitter 2",
+      "facebook": "Facebook 2"
+    }
   ]
 }
