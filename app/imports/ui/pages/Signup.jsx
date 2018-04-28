@@ -36,13 +36,21 @@ export default class Signup extends React.Component {
 
   /** Display the signup form. */
   render() {
+    const fat = {padding: "40px", margin: "-10px", background: "#FD7328", paddingBottom: "35px", marginBottom: "15px"};
+    const spaceFix = {letterSpacing: "3px"};
+    const backColor = {background: "#FD7328", paddingBottom: "390px"};
+    const margFix = {marginBottom: "15px"};
+
     return (
+        <div style={backColor}>
+          <Container textAlign="center" style={fat}>
+            <Header as="h1" style={spaceFix} >
+              REGISTER TO GET STARTED
+            </Header>
+          </Container>
         <Container>
           <Grid textAlign="center" verticalAlign="middle" centered columns={2}>
             <Grid.Column>
-              <Header as="h2" textAlign="center">
-                Register your account
-              </Header>
               <Form onSubmit={this.handleSubmit}>
                 <Segment stacked>
                   <Form.Input
@@ -66,7 +74,7 @@ export default class Signup extends React.Component {
                   <Form.Button content="Submit"/>
                 </Segment>
               </Form>
-              <Message>
+              <Message style={margFix}>
                 Already have an account? Login <Link to="/signin">here</Link>
               </Message>
               {this.state.error === '' ? (
@@ -81,6 +89,7 @@ export default class Signup extends React.Component {
             </Grid.Column>
           </Grid>
         </Container>
+        </div>
     );
   }
 }

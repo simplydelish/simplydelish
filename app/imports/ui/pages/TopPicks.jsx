@@ -4,14 +4,19 @@ import FoodCard from '../components/FoodCard';
 import PropTypes from 'prop-types';
 import { withTracker } from 'meteor/react-meteor-data';
 import { Foods } from '/imports/api/food/food';
+import TopPickHeader from '../components/TopPickHeader';
+import TopPicksHeader from '../components/TopPicksHeader';
 
 class TopPicks extends React.Component {
 
   render() {
+    const paddingAdjust = {paddingTop: "45px", paddingBottom: "95px"};
+
     return (
         <div className='background'>
+          <TopPicksHeader/>
           <Grid centered>
-            <Grid.Row>
+            <Grid.Row style={paddingAdjust}>
               {this.props.foods.map((food) =>
                   <FoodCard
                       key={food._id}
