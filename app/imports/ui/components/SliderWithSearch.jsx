@@ -1,7 +1,7 @@
 import React from 'react';
 import 'semantic-ui-css/semantic.min.css';
 import { Image , Grid, Search} from 'semantic-ui-react';
-import { render } from 'react-dom';
+import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 
 
 export default class SliderWithSearch extends React.Component {
@@ -67,12 +67,15 @@ handleSearchChange = (e, { value }) => {
     this.setState({
       isLoading: false,
       results: results,
-    });
+
+  });
   }, 500)
 }
 
 resultRenderer({ id, title }) {
-  return <div id={id} key={id}>{title}</div>
+  return <div id={id} key={id}>{title}</div>,
+  (<Redirect to={{ pathname: '/vendors', state: { from: this.location }}} />)
+
 }
   render() {
   const { isLoading, value, results } = this.state;
