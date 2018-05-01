@@ -1,8 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Card, Image, Icon, Label } from 'semantic-ui-react';
-
+import { Card, Image, Icon, Label, Button } from 'semantic-ui-react';
+import { Foods, FoodSchema } from '/imports/api/food/food';
+import { withTracker } from 'meteor/react-meteor-data';
 class FoodCard extends React.Component {
+  constructor(props) {
+    super(props);
+    this.onClick = this.onClick.bind(this);
+  }
+  deleteCallback(error) {
+    if (error) {
+      Bert.alert({ type: 'danger', message: `Delete failed: ${error.message}` });
+    } else {
+      Bert.alert({ type: 'success', message: 'Delete succeeded' });
+    }
+  }
+  onClick() {
+    Foods.remove({ this:props._id }, this.deleteCallback);
+  }
 
   render() {
     const heartStyle = { color: '#be1e2d' };
@@ -26,6 +41,9 @@ class FoodCard extends React.Component {
                 <Label as='a' key={foodTag} tag>{foodTag}</Label>
             )}
           </Card.Content>
+          <Card.Content extra>
+            <Button basic onClick={this.onClick}>Delete</Button>
+          </Card.Content>
         </Card>
     );
   }
@@ -40,4 +58,10 @@ FoodCard.propTypes = {
   tags: PropTypes.array,
 };
 
-export default FoodCard;
+export default withTracker(() => {
+  const subscription = Meteor.subscribe('Foods');
+  return {
+    foods: Foods.find({}, {sort: {numLikes: -1}}).fetch(),
+    ready: subscription.ready(),
+  };
+})(FoodCard);

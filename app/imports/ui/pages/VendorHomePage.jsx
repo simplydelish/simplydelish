@@ -35,8 +35,8 @@ class VendorHomePage extends React.Component {
 
   /** On submit, insert the data. */
   submit(data) {
-    const { image, itemName, description } = data;
-    Foods.insert({ image, itemName, description }, this.insertCallback);
+    const { image, itemName, description, tags } = data;
+    Foods.insert({ image, itemName, description, tags }, this.insertCallback);
   }
 
   render() {
@@ -76,6 +76,7 @@ class VendorHomePage extends React.Component {
                 <TextField name='itemName' placeholder='Menu Item'/>
                 <TextField name='description' placeholder='Tell us more about this item...'/>
                 <TextField name='image' placeholder='Give us an image...'/>
+                <TextField name='tags' placeholder='Add a tag...'/>
                 <SubmitField value='Add Item'/>
                 <ErrorsField/>
               </Segment>
