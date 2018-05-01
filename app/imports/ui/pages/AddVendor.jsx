@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Form, Grid } from 'semantic-ui-react';
+import AddVendorHeader from '../components/AddVendorHeader';
 
 const priceoptions = [
   { key: '$', text: '$', value: '$' },
@@ -18,9 +19,12 @@ export default class AddVendor extends React.Component {
 
   render() {
     const { value } = this.state;
+    const paddFix = {paddingBottom: "155px"};
     return (
+        <div >
+          <AddVendorHeader/>
           <Container>
-            <Form>
+            <Form >
               <Form.Group widths='equal'>
                 <Form.Input fluid label='Vendor name' placeholder='Vendor name'/>
                 <Form.Input fluid label='Phone number' placeholder='___ - ____ - _____'/>
@@ -90,9 +94,12 @@ export default class AddVendor extends React.Component {
                 </Grid.Column>
               </Grid>
               <br></br>
-              <Form.Button fluid>Submit</Form.Button>
+              <div style={paddFix}>
+              <Form.Button  fluid>Submit</Form.Button>
+              </div>
             </Form>
           </Container>
+        </div>
     );
   }
 }
