@@ -4,7 +4,6 @@ import FoodCard from '../components/FoodCard';
 import PropTypes from 'prop-types';
 import { withTracker } from 'meteor/react-meteor-data';
 import { Foods } from '/imports/api/food/food';
-import TopPickHeader from '../components/TopPickHeader';
 import TopPicksHeader from '../components/TopPicksHeader';
 
 class TopPicks extends React.Component {
