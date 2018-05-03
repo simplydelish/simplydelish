@@ -20,8 +20,9 @@ export default class AddVendor extends React.Component {
   render() {
     const { value } = this.state;
     const paddFix = {paddingBottom: "155px"};
+    const backColor = {backgroundColor: "#ffc40c"};
     return (
-        <div >
+        <div style={backColor} >
           <AddVendorHeader/>
           <Container>
             <Form >
@@ -95,7 +96,7 @@ export default class AddVendor extends React.Component {
               </Grid>
               <br></br>
               <div style={paddFix}>
-              <Form.Button  fluid>Submit</Form.Button>
+              <Form.Button  fluid>SUBMIT</Form.Button>
               </div>
             </Form>
           </Container>

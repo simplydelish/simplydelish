@@ -7,6 +7,7 @@ class FoodCard extends React.Component {
   render() {
     const heartStyle = { color: '#be1e2d' };
     const cardStyle = { margin: '3em' };
+    const tagColor = {backgroundColor: "#f15a29"};
     return (
         <Card style={cardStyle}>
           <Image src={this.props.image} />
@@ -23,7 +24,7 @@ class FoodCard extends React.Component {
           </Card.Content>
           <Card.Content extra>
             {this.props.tags.map((foodTag) =>
-                <Label as='a' key={foodTag} tag>{foodTag}</Label>
+                <Label as='a' key={foodTag} tag style={tagColor}>{foodTag}</Label>
             )}
           </Card.Content>
         </Card>

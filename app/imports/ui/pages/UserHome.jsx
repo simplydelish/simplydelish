@@ -1,20 +1,21 @@
 import { Grid } from 'semantic-ui-react';
 import React from 'react';
 import 'semantic-ui-css/semantic.css';
-import SliderWithSearch from '../components/SliderWithSearch';
 import TopPickHeader from '../components/TopPickHeader';
 import { Foods } from '/imports/api/food/food';
 import FoodCard from '../components/FoodCard';
 import PropTypes from 'prop-types';
 import { withTracker } from 'meteor/react-meteor-data';
+import SliderDark from '../components/SliderDark';
 
 class UserHomepage extends React.Component {
   render() {
     const paddingAdjust = {paddingTop: "45px", paddingBottom: "95px"};
+    const margFix = {marginTop: "-10px"};
 
     return (
-        <div>
-          <SliderWithSearch/>
+        <div style={margFix}>
+          <SliderDark/>
           <TopPickHeader/>
           <Grid centered>
             <Grid.Row style={paddingAdjust}>

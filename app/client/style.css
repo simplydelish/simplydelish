@@ -222,3 +222,30 @@ h1.ui.header {
   font-size: 1.3em;
   color: #f15a29;
 }
+
+.ui.label {
+  background-color: #f15a29;
+}
+
+.ui.form {
+  font-size: 1.18rem;
+}
+
+.ui.form .field>label {
+  color: #802C00;
+}
+
+.ui.form .grouped.fields>label {
+  color: #802C00;
+}
+
+.ui.button{
+  background: #EB5507;
+  padding: 1.2em;
+  font-size: 1.3rem;
+  letter-spacing: 3px;
+}
+
+.ui.dimmer {
+  background-color: rgba(0,0,0,0.64);
+}
