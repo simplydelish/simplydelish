@@ -44,7 +44,7 @@ class VendorHomePage extends React.Component {
     return (
         <Grid>
           <Grid.Column width={4} style={{ marginLeft: '150px' }}>
-            <Card>
+            <Card style={margAdjust}>
               <Card.Content>
                 <Image floated='right' size='big'
                        src='http://yoensalada.es/wp-content/uploads/2017/06/LogoPortada-1024x682-990x420.jpg'/>
