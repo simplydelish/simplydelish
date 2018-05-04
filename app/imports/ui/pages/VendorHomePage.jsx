@@ -1,24 +1,17 @@
 import React from 'react';
-import { Grid, Header, Card, Image, Segment, Button, Dropdown } from 'semantic-ui-react';
-import FoodCard from '../components/FoodCard';
+import { Grid, Header, Card, Image, Segment, Button } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withTracker } from 'meteor/react-meteor-data';
 import { Foods, FoodSchema } from '/imports/api/food/food';
-import { Meteor } from "meteor/meteor";
+import { Meteor } from 'meteor/meteor';
 import AutoForm from 'uniforms-semantic/AutoForm';
 import TextField from 'uniforms-semantic/TextField';
 import SubmitField from 'uniforms-semantic/SubmitField';
 import ErrorsField from 'uniforms-semantic/ErrorsField';
 import { Bert } from 'meteor/themeteorchef:bert';
+import FoodCard from '../components/FoodCard';
 
 /** A simple static component to render some text for the landing page. */
-
-const options = [
-  { key: 'vegan', text: 'Vegan', value: 'Vegan' },
-  { key: 'vegitarian', text: 'Vegitarian', value: 'Vegitarian' },
-  { key: 'glutenFree', text: 'Gluten Free', value: 'Gluten Free' },
-  { key: 'dairyFree', text: 'Dairy Free', value: 'Dairy Free' },
-];
 
 class VendorHomePage extends React.Component {
 
@@ -42,9 +35,8 @@ class VendorHomePage extends React.Component {
 
   /** On submit, insert the data. */
   submit(data) {
-    console.log(data);
-    const { image, itemName, description, tags } = data;
-    Foods.insert({ image, itemName, description, tags }, this.insertCallback);
+    const { image, itemName, description } = data;
+    Foods.insert({ image, itemName, description }, this.insertCallback);
   }
 
   render() {
@@ -86,7 +78,7 @@ class VendorHomePage extends React.Component {
                 <TextField name='itemName' placeholder='Menu Item'/>
                 <TextField name='description' placeholder='Tell us more about this item...'/>
                 <TextField name='image' placeholder='Give us an image...'/>
-                <Dropdown name='tags' placeholder='Tags' fluid multiple selection options={options} style={ { marginBottom: '1.5em' } }/>
+                <TextField name='tags' placeholder='Add a tag...'/>
                 <SubmitField value='Add Item'/>
                 <ErrorsField/>
               </Segment>
