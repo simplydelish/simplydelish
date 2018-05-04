@@ -40,6 +40,7 @@ class VendorHomePage extends React.Component {
   }
 
   render() {
+    const margAdjust = {marginTop: "43px"};
     return (
         <Grid>
           <Grid.Column width={4} style={{ marginLeft: '150px' }}>
