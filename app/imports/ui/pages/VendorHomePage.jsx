@@ -35,8 +35,8 @@ class VendorHomePage extends React.Component {
 
   /** On submit, insert the data. */
   submit(data) {
-    const { image, itemName, description } = data;
-    Foods.insert({ image, itemName, description }, this.insertCallback);
+    const { image, itemName, description, tags } = data;
+    Foods.insert({ image, itemName, description, tags }, this.insertCallback);
   }
 
   render() {
