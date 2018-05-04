@@ -1,15 +1,15 @@
 import React from 'react';
 import { Grid, Header, Card, Image, Segment, Button } from 'semantic-ui-react';
-import FoodCard from '../components/FoodCard';
 import PropTypes from 'prop-types';
 import { withTracker } from 'meteor/react-meteor-data';
 import { Foods, FoodSchema } from '/imports/api/food/food';
-import { Meteor } from "meteor/meteor";
+import { Meteor } from 'meteor/meteor';
 import AutoForm from 'uniforms-semantic/AutoForm';
 import TextField from 'uniforms-semantic/TextField';
 import SubmitField from 'uniforms-semantic/SubmitField';
 import ErrorsField from 'uniforms-semantic/ErrorsField';
 import { Bert } from 'meteor/themeteorchef:bert';
+import FoodCard from '../components/FoodCard';
 
 /** A simple static component to render some text for the landing page. */
 

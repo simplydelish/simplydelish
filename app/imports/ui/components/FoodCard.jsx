@@ -3,20 +3,18 @@ import PropTypes from 'prop-types';
 import { Card, Image, Icon, Label, Button } from 'semantic-ui-react';
 import { Foods, FoodSchema } from '/imports/api/food/food';
 import { withTracker } from 'meteor/react-meteor-data';
+
 class FoodCard extends React.Component {
+
   constructor(props) {
     super(props);
-    this.onClick = this.onClick.bind(this);
+    this.delete = this.delete.bind(this);
   }
-  deleteCallback(error) {
-    if (error) {
-      Bert.alert({ type: 'danger', message: `Delete failed: ${error.message}` });
-    } else {
-      Bert.alert({ type: 'success', message: 'Delete succeeded' });
-    }
-  }
-  onClick() {
-    Foods.remove({ this:props._id }, this.deleteCallback);
+
+  delete() {
+    const item = this.props.itemName;
+    const food = Foods.findOne({ itemName: item });
+    Foods.remove({ _id: food._id });
   }
 
   render() {
@@ -42,7 +40,7 @@ class FoodCard extends React.Component {
             )}
           </Card.Content>
           <Card.Content extra>
-            <Button basic onClick={this.onClick}>Delete</Button>
+            <Button basic onClick={this.delete}>Delete</Button>
           </Card.Content>
         </Card>
     );
