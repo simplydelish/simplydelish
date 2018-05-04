@@ -7,10 +7,10 @@ class FoodCard extends React.Component {
   render() {
     const heartStyle = { color: '#be1e2d' };
     const cardStyle = { margin: '3em' };
-    const tagColor = {backgroundColor: "#f15a29"};
+    const tagColor = { backgroundColor: '#f15a29', color: 'white' };
     return (
         <Card style={cardStyle}>
-          <Image src={this.props.image} />
+          <Image src={this.props.image}/>
           <Card.Content>
             <Card.Header>{this.props.itemName}</Card.Header>
             <Card.Meta>{this.props.vendorName}</Card.Meta>
@@ -18,7 +18,7 @@ class FoodCard extends React.Component {
           </Card.Content>
           <Card.Content extra>
             <span className='right floated'>
-              <Icon name={'heart'} style={heartStyle} />
+              <Icon name={'heart'} style={heartStyle}/>
               {this.props.numLikes} Likes
             </span>
           </Card.Content>

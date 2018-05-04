@@ -1,23 +1,25 @@
 import React from 'react';
 import 'semantic-ui-css/semantic.min.css';
 import { Image } from 'semantic-ui-react';
-import { Segment, Icon , Card} from 'semantic-ui-react';
+import { Segment, Icon, Card } from 'semantic-ui-react';
 
 export default class Food extends React.Component {
 
   render() {
-    const foodBack = {  boxShadow: "none",
-      border: "none", background: "transparent"};
-    const starC = {color: "#f7941d"};
-    const heartC = {color: "#be1e2d"};
-    const cardStyle = {width: "290px", maxWidth: "100%"};
-    const paddingFix = {padding: "5em"};
+    const foodBack = {
+      boxShadow: "none",
+      border: "none", background: "transparent"
+    };
+    const starC = { color: "#f7941d" };
+    const heartC = { color: "#be1e2d" };
+    const cardStyle = { width: "290px", maxWidth: "100%" };
+    const paddingFix = { padding: "5em" };
 
     return (
         <Segment textAlign="center" style={foodBack}>
           <Card.Group style={paddingFix}>
             <Card centered style={cardStyle}>
-              <Image src='/images/sistah.png' />
+              <Image src='/images/sistah.png'/>
               <Card.Content>
                 <Card.Header>
                   The Sistah
@@ -39,7 +41,7 @@ export default class Food extends React.Component {
               </Card.Content>
             </Card>
             <Card centered style={cardStyle}>
-              <Image src='/images/lecrepe.png' />
+              <Image src='/images/lecrepe.png'/>
               <Card.Content>
                 <Card.Header>
                   Le Crêpe Cafe
@@ -61,7 +63,7 @@ Monday thru Friday: 8:00am -  2:00pm  Law Plaza
               </Card.Content>
             </Card>
             <Card centered style={cardStyle}>
-              <Image src='/images/banan.png' />
+              <Image src='/images/banan.png'/>
               <Card.Content>
                 <Card.Header>
                   Banan

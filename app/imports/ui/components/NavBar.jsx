@@ -9,7 +9,7 @@ import { Roles } from 'meteor/alanning:roles';
 /** The NavBar appears at the top of every page. Rendered by the App Layout component. */
 class NavBar extends React.Component {
   render() {
-    const menuStyle = { marginBottom: '10px', background: "#f15a29"};
+    const menuStyle = { marginBottom: '10px', background: "#f15a29" };
     return (
         <Menu style={menuStyle} attached="top" borderless inverted>
           <Menu.Item as={NavLink} activeClassName="" exact to="/">
@@ -17,22 +17,26 @@ class NavBar extends React.Component {
           </Menu.Item>
 
           {this.props.currentUser ? (
-              <Menu.Item as={NavLink} activeClassName="active" exact to="/userhome" key='userhome'><Icon name='home' />Home</Menu.Item>
+              <Menu.Item as={NavLink} activeClassName="active" exact to="/userhome" key='userhome'><Icon name='home'/>Home</Menu.Item>
 
           ) : ''}
 
 
-          <Menu.Item as={NavLink} activeClassName="active" exact to="/toppicks" key='toppicks'><Icon name='star' />Top Picks</Menu.Item>
-          <Menu.Item as={NavLink} activeClassName="active" exact to="/vendors" key='list'><Icon name='map pin' />Vendors</Menu.Item>
+          <Menu.Item as={NavLink} activeClassName="active" exact to="/toppicks" key='toppicks'><Icon name='star'/>Top
+            Picks</Menu.Item>
+          <Menu.Item as={NavLink} activeClassName="active" exact to="/vendors" key='list'><Icon name='map pin'/>Vendors</Menu.Item>
           <Menu.Item position="right">
             {this.props.currentUser && !Roles.userIsInRole(Meteor.userId(), 'vendor') && !Roles.userIsInRole(Meteor.userId(), 'admin') ? (
-                <Menu.Item position="right" as={NavLink} activeClassName="active" exact to="/userprofile" key='userprofile'><Icon name='user circle' />User Profile</Menu.Item>
+                <Menu.Item position="right" as={NavLink} activeClassName="active" exact to="/userprofile"
+                           key='userprofile'><Icon name='user circle'/>User Profile</Menu.Item>
             ) : ''}
             {Roles.userIsInRole(Meteor.userId(), 'vendor') ? (
-                <Menu.Item as={NavLink} activeClassName="active" exact to="/vendorhomepage" key='vendorhomepage'><Icon name='home' />Vendor Home</Menu.Item>
+                <Menu.Item as={NavLink} activeClassName="active" exact to="/vendorhomepage" key='vendorhomepage'><Icon
+                    name='home'/>Vendor Home</Menu.Item>
             ) : ''}
             {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
-                <Menu.Item as={NavLink} activeClassName="active" exact to="/addvendor" key='addvendor'><Icon name='plus' />Add Vendor</Menu.Item>
+                <Menu.Item as={NavLink} activeClassName="active" exact to="/addvendor" key='addvendor'><Icon
+                    name='plus'/>Add Vendor</Menu.Item>
             ) : ''}
             {this.props.currentUser === '' ? (
                 <Dropdown text="Login" pointing="top right">

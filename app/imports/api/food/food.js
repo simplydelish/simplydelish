@@ -14,6 +14,7 @@ const FoodSchema = new SimpleSchema({
   numLikes: { type: Number, optional: true },
   tags: {
     type: Array,
+    optional: true,
   },
   'tags.$': String,
 }, { tracker: Tracker });

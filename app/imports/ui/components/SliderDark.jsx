@@ -4,11 +4,11 @@ import 'semantic-ui-css/semantic.css';
 import 'semantic-ui-css/semantic.min.css';
 import { Image, Dimmer } from 'semantic-ui-react';
 
-
 export default class SliderDark extends React.Component {
   render() {
-    const adjust = {marginTop: "0px", padding: "500px", backgroundColor: "rgba(0,0,0,0.6)"
-  };
+    const adjust = {
+      marginTop: "0px", padding: "500px", backgroundColor: "rgba(0,0,0,0.6)"
+    };
     return (
 
         <div id="slider">
@@ -23,7 +23,6 @@ export default class SliderDark extends React.Component {
 
           </figure>
         </div>
-
 
     );
   }

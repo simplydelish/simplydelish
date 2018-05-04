@@ -1,11 +1,10 @@
 import { Grid, Loader } from 'semantic-ui-react';
 import React from 'react';
-import VendorCard from '../components/VendorCard';
 import { Vendors } from '/imports/api/vendor/vendor';
 import { Meteor } from 'meteor/meteor';
 import PropTypes from 'prop-types';
 import { withTracker } from 'meteor/react-meteor-data';
-import VendorMenu from '/imports/ui/pages/VendorMenu';
+import VendorCard from '../components/VendorCard';
 import VendorHead from '../components/VendorHead';
 
 class VendorsPage extends React.Component {
@@ -14,31 +13,23 @@ class VendorsPage extends React.Component {
     return (this.props.ready) ? this.renderPage() : <Loader>Getting data</Loader>;
   }
 
-  displayMenu(vendorName) {
-
-  }
-
   renderPage() {
-    const paddingAdjust = {paddingTop: "45px", paddingBottom: "258px"};
+    const paddingAdjust = { paddingTop: '45px', paddingBottom: '258px' };
     return (
-        <div >
+        <div>
           <VendorHead/>
-        <Grid centered>
-          <Grid.Row style={paddingAdjust}>
-            {this.props.vendors.map((vendor) =>
-                <div key={vendor._id} onClick={() => {
-                  this.displayMenu(vendor.title)
-                }}>
+          <Grid centered>
+            <Grid.Row style={paddingAdjust}>
+              {this.props.vendors.map((vendor) =>
                   <VendorCard
                       key={vendor._id}
                       image={vendor.image}
                       title={vendor.title}
                       hours={vendor.hours}
                       description={vendor.description}
-                  />
-                </div>)}
-          </Grid.Row>
-        </Grid>
+                  />)}
+            </Grid.Row>
+          </Grid>
         </div>
     );
   }

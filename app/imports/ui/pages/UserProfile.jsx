@@ -8,7 +8,7 @@ const foodtasteoptions = [
   { key: 'taste option 3', text: 'taste option 3', value: 'taste option 3' },
 ];
 
-const paddFix = {paddingTop: "50px", paddingBottom: "159px"};
+const paddFix = { paddingTop: '50px', paddingBottom: '159px' };
 
 /** A simple static component to render some text for the landing page. */
 export default class UserProfile extends React.Component {
@@ -27,9 +27,9 @@ export default class UserProfile extends React.Component {
                         Username
                       </Card.Header>
                       <Card.Meta>
-        <span className='date'>
-          Joined in 2015
-        </span>
+                        <span className='date'>
+                          Joined in 2015
+                        </span>
                       </Card.Meta>
                       <Card.Description>
                         john@foo.com
