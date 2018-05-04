@@ -4,7 +4,6 @@ import 'semantic-ui-css/semantic.css';
 import 'semantic-ui-css/semantic.min.css';
 import { Image } from 'semantic-ui-react';
 
-
 export default class Slider extends React.Component {
   render() {
     return (
@@ -19,7 +18,6 @@ export default class Slider extends React.Component {
 
           </figure>
         </div>
-
 
     );
   }

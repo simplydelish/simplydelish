@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Header, Card, Image, Segment, Button } from 'semantic-ui-react';
+import { Grid, Header, Card, Image, Segment, Button, Dropdown } from 'semantic-ui-react';
 import FoodCard from '../components/FoodCard';
 import PropTypes from 'prop-types';
 import { withTracker } from 'meteor/react-meteor-data';
@@ -12,6 +12,13 @@ import ErrorsField from 'uniforms-semantic/ErrorsField';
 import { Bert } from 'meteor/themeteorchef:bert';
 
 /** A simple static component to render some text for the landing page. */
+
+const options = [
+  { key: 'vegan', text: 'Vegan', value: 'Vegan' },
+  { key: 'vegitarian', text: 'Vegitarian', value: 'Vegitarian' },
+  { key: 'glutenFree', text: 'Gluten Free', value: 'Gluten Free' },
+  { key: 'dairyFree', text: 'Dairy Free', value: 'Dairy Free' },
+];
 
 class VendorHomePage extends React.Component {
 
@@ -35,8 +42,9 @@ class VendorHomePage extends React.Component {
 
   /** On submit, insert the data. */
   submit(data) {
-    const { image, itemName, description } = data;
-    Foods.insert({ image, itemName, description }, this.insertCallback);
+    console.log(data);
+    const { image, itemName, description, tags } = data;
+    Foods.insert({ image, itemName, description, tags }, this.insertCallback);
   }
 
   render() {
@@ -70,19 +78,22 @@ class VendorHomePage extends React.Component {
           <Grid.Column width={9}>
             <Header as="h2" textAlign="center">Add Item</Header>
 
-            <AutoForm ref={(ref) => { this.formRef = ref;}} schema={FoodSchema} onSubmit={this.submit}>
+            <AutoForm ref={(ref) => {
+              this.formRef = ref;
+            }} schema={FoodSchema} onSubmit={this.submit}>
 
               <Segment>
                 <TextField name='itemName' placeholder='Menu Item'/>
                 <TextField name='description' placeholder='Tell us more about this item...'/>
                 <TextField name='image' placeholder='Give us an image...'/>
+                <Dropdown name='tags' placeholder='Tags' fluid multiple selection options={options} style={ { marginBottom: '1.5em' } }/>
                 <SubmitField value='Add Item'/>
                 <ErrorsField/>
               </Segment>
             </AutoForm>
           </Grid.Column>
 
-          <Grid.Row>
+          <Grid.Row centered={true}>
             {this.props.foods.map((vendor) =>
                 <FoodCard
                     key={vendor._id}
@@ -107,7 +118,7 @@ VendorHomePage.propTypes = {
 export default withTracker(() => {
   const subscription = Meteor.subscribe('Foods');
   return {
-    foods: Foods.find({}).fetch(),
+    foods: Foods.find({}, { sort: { numLikes: -1 } }).fetch(),
     ready: subscription.ready(),
   };
 })(VendorHomePage);

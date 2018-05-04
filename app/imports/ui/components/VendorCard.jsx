@@ -8,7 +8,7 @@ class VendorCard extends React.Component {
     const cardStyle = { margin: '3em' };
     return (
         <Card style={cardStyle}>
-          <Image src={this.props.image} />
+          <Image src={this.props.image}/>
           <Card.Content>
             <Card.Header>{this.props.title}</Card.Header>
             <Card.Meta>{this.props.hours}</Card.Meta>

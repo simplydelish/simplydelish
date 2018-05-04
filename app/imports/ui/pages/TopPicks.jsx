@@ -9,7 +9,7 @@ import TopPicksHeader from '../components/TopPicksHeader';
 class TopPicks extends React.Component {
 
   render() {
-    const paddingAdjust = {paddingTop: "45px", paddingBottom: "95px"};
+    const paddingAdjust = { paddingTop: "45px", paddingBottom: "95px" };
 
     return (
         <div className='background'>
@@ -41,7 +41,7 @@ TopPicks.propTypes = {
 export default withTracker(() => {
   const subscription = Meteor.subscribe('Foods');
   return {
-    foods: Foods.find({}, {sort: {numLikes: -1}}).fetch(),
+    foods: Foods.find({}, { sort: { numLikes: -1 } }).fetch(),
     ready: subscription.ready(),
   };
 })(TopPicks);

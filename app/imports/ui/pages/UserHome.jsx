@@ -10,8 +10,8 @@ import SliderDark from '../components/SliderDark';
 
 class UserHomepage extends React.Component {
   render() {
-    const paddingAdjust = {paddingTop: "45px", paddingBottom: "95px"};
-    const margFix = {marginTop: "-10px"};
+    const paddingAdjust = { paddingTop: "45px", paddingBottom: "95px" };
+    const margFix = { marginTop: "-10px" };
 
     return (
         <div style={margFix}>
@@ -45,7 +45,7 @@ UserHomepage.propTypes = {
 export default withTracker(() => {
   const subscription = Meteor.subscribe('Foods');
   return {
-    foods: Foods.find({}, {sort: {numLikes: -1}}).fetch(),
+    foods: Foods.find({}, { sort: { numLikes: -1 } }).fetch(),
     ready: subscription.ready(),
   };
 })(UserHomepage);

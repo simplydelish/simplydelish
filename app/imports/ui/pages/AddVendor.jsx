@@ -19,13 +19,13 @@ export default class AddVendor extends React.Component {
 
   render() {
     const { value } = this.state;
-    const paddFix = {paddingBottom: "155px"};
-    const backColor = {backgroundColor: "#ffc40c"};
+    const paddFix = { paddingBottom: "155px" };
+    const backColor = { backgroundColor: "#ffc40c" };
     return (
-        <div style={backColor} >
+        <div style={backColor}>
           <AddVendorHeader/>
           <Container>
-            <Form >
+            <Form>
               <Form.Group widths='equal'>
                 <Form.Input fluid label='Vendor name' placeholder='Vendor name'/>
                 <Form.Input fluid label='Phone number' placeholder='___ - ____ - _____'/>
@@ -96,7 +96,7 @@ export default class AddVendor extends React.Component {
               </Grid>
               <br></br>
               <div style={paddFix}>
-              <Form.Button  fluid>SUBMIT</Form.Button>
+                <Form.Button fluid>SUBMIT</Form.Button>
               </div>
             </Form>
           </Container>

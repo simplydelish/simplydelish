@@ -6,7 +6,6 @@ import { Meteor } from 'meteor/meteor';
 import PropTypes from 'prop-types';
 import { withTracker } from 'meteor/react-meteor-data';
 
-
 class VendorMenu extends React.Component {
 
   render() {
@@ -15,20 +14,20 @@ class VendorMenu extends React.Component {
 
   renderPage() {
     return (
-          <Grid centered>
-            <Grid.Row>
-              {this.props.foods.map((food) =>
-                  <FoodCard
-                      key={food._id}
-                      image={food.image}
-                      itemName={food.itemName}
-                      vendorName={food.vendorName}
-                      description={food.description}
-                      numLikes={food.numLikes}
-                      tags={food.tags}
-                  />)}
-            </Grid.Row>
-          </Grid>
+        <Grid centered>
+          <Grid.Row>
+            {this.props.foods.map((food) =>
+                <FoodCard
+                    key={food._id}
+                    image={food.image}
+                    itemName={food.itemName}
+                    vendorName={food.vendorName}
+                    description={food.description}
+                    numLikes={food.numLikes}
+                    tags={food.tags}
+                />)}
+          </Grid.Row>
+        </Grid>
     );
   }
 }
@@ -42,7 +41,7 @@ VendorMenu.propTypes = {
 export default withTracker(() => {
   const subscription = Meteor.subscribe('Foods');
   return {
-    foods: Foods.find( { vendorName: this.props.vendor } ).fetch(),
+    foods: Foods.find({ vendorName: this.props.vendor }).fetch(),
     ready: subscription.ready(),
   };
 })(VendorMenu);

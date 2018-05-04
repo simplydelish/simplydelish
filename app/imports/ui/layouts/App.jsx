@@ -32,22 +32,22 @@ class App extends React.Component {
           <div>
             <NavBar/>
             <Switch>
-              <Route exact path="/" component={Landing} />
-              <Route path='/userhome' component={UserHome} />
-              <Route path='/toppicks' component={TopPicks} />
-              <Route path='/vendors' component={VendorsPage} />
-              <Route path="/signin" component={Signin} />
-              <Route path="/signup" component={Signup} />
-              <ProtectedRoute path="/userprofile" component={UserProfile} />
-              <AdminProtectedRoute path="/addvendor" component={AddVendor} />
-              <VendorProtectedRoute path='/vendorhomepage' component={VendorHomePage} />
-              <AdminProtectedRoute path="/AdminHomePage" component={AdminHomePage} />
-              <ProtectedRoute path="/list" component={ListStuff} />
-              <ProtectedRoute path="/add" component={AddStuff} />
-              <ProtectedRoute path="/edit/:_id" component={EditStuff} />
-              <AdminProtectedRoute path="/admin" component={ListStuffAdmin} />
-              <ProtectedRoute path="/signout" component={Signout} />
-              <Route component={NotFound} />
+              <Route exact path="/" component={Landing}/>
+              <Route path='/userhome' component={UserHome}/>
+              <Route path='/toppicks' component={TopPicks}/>
+              <Route path='/vendors' component={VendorsPage}/>
+              <Route path="/signin" component={Signin}/>
+              <Route path="/signup" component={Signup}/>
+              <ProtectedRoute path="/userprofile" component={UserProfile}/>
+              <AdminProtectedRoute path="/addvendor" component={AddVendor}/>
+              <VendorProtectedRoute path='/vendorhomepage' component={VendorHomePage}/>
+              <AdminProtectedRoute path="/AdminHomePage" component={AdminHomePage}/>
+              <ProtectedRoute path="/list" component={ListStuff}/>
+              <ProtectedRoute path="/add" component={AddStuff}/>
+              <ProtectedRoute path="/edit/:_id" component={EditStuff}/>
+              <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
+              <ProtectedRoute path="/signout" component={Signout}/>
+              <Route component={NotFound}/>
             </Switch>
             <Footer2/>
           </div>
@@ -129,6 +129,5 @@ VendorProtectedRoute.propTypes = {
   component: PropTypes.func.isRequired,
   location: PropTypes.object,
 };
-
 
 export default App;
